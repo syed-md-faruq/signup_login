@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const createerror = require('http-errors');
+require('dotenv').config();
 
 exports.accesstoken = (userid) => {
         

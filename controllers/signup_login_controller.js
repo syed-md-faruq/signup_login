@@ -4,10 +4,6 @@ const user_model = require('../models/user_model');
 const {authschema} = require('../helpers/schema_validation');
 const {accesstoken, refreshtoken, verifyrefreshtoken} = require('../helpers/jwt');
 
-const jwt = require('jsonwebtoken');
-
-require('dotenv').config();
-
 exports.signup = async(req, res, next)=>{
     try {
         const result = await authschema.validateAsync({"email":req.body.email,"password":req.body.password});
