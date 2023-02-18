@@ -37,7 +37,7 @@ exports.login = async(req, res, next)=>{
 
         res.send({acctoken,reftoken});
     } catch (error) {
-        if(error.isJoi === true) return next(createError.BadRequest('Invalid Username/Password'));
+        if(error.isJoi === true) return next(createerror.BadRequest('Invalid Username/Password'));
         next(error);
     }
 }
